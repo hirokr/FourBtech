@@ -93,7 +93,7 @@ export default function Home() {
         <h1 className='text-2xl py-4 lg:text-4xl font-semibold text-center'>
           Testimonials <span className='text-[#A0E00D]'>About US</span>
         </h1>
-        <div className='gird grid-cols-2 gap-2 w-full'>
+        <div className='grid grid-cols-2 gap-2 w-full'>
           <div>
             <TestimonialCard
               image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzTWQoCUbRNdiyorem5Qp1zYYhpliR9q0Bw&s'
