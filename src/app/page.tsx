@@ -5,29 +5,38 @@ import { Input } from "@/components/ui/input";
 import ServiceCard from "@/components/serviceCard";
 import { TbSpeakerphone } from "react-icons/tb";
 import TestimonialCard from "@/components/TestimonialCard";
+import { ReviewData } from "@/lib/reviewData";
+import { ReviewSwiper } from "@/components/personCardSwiper";
 
 export default function Home() {
   const iconStyle = "text-[#A0E00D]  h-8 w-8";
+  const reviews = ReviewData;
   return (
     <main className='allPadding'>
       <section className=''>
         <div className=' py-10 flex flex-col justify-center items-center gap-5 xl:gap-8'>
-          <h1 className='text-center text-4xl xl:text-6xl font-bold leading-14 '>
+          <h1 className='text-center text-2xl md:text-4xl xl:text-6xl font-bold lg:leading-14 '>
             <span className='text-[#A0E00D]'>Feature-Proof</span> Your <br />
             Business with Expart
             <span className='text-[#A0E00D]'> IT Services</span>
           </h1>
-          <p className='text-center px-32 text-sm text-white/60'>
+          <p className='text-center text-[.8rem] md:text-sm text-white/60'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             ratione ut molestiae fugit voluptatum commodi quis magnam sit
             accusamus ea?
           </p>
           <div
-            className='flex w-full max-w-1/2 xl:max-w-1/3
+            className='flex w-full xl:max-w-1/3
           items-center space-x-2'
           >
-            <Input type='email' placeholder='example@gmail.com' className='' />
-            <Button type='submit'>Get notified</Button>
+            <Input
+              type='email'
+              placeholder='example@gmail.com'
+              className=' text-[.8rem] md:text-sm'
+            />
+            <Button type='submit' className=''>
+              Get notified
+            </Button>
           </div>
         </div>
         <AspectRatio ratio={16 / 9} className=''>
@@ -40,13 +49,13 @@ export default function Home() {
         </AspectRatio>
         <div className=''></div>
       </section>
-      <section className='grid grid-cols-2 py-10 gap-5 '>
+      <section className='grid grid-cols-1 sm:grid-cols-2 py-10 gap-5 '>
         <div className='flex-col flex justify-center items-start gap-3 '>
           <p className='text-[#A0E00D]'>About us</p>
           <h1 className='text-2xl lg:text-4xl'>
             Welcome to <span className='font-semibold'>FourBtech</span>
           </h1>
-          <p className='text-sm text-white/70 py-1'>
+          <p className='text-sm lg:text-sm text-white/70 py-1'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates
             a perferendis amet labore magnam, possimus deserunt aliquam ut
             commodi illum mollitia corporis dolor eveniet laboriosam nobis
@@ -71,7 +80,7 @@ export default function Home() {
           Since 2020 we have been helping small to large businesses transform
           their businesses into digital products,
         </p>
-        <div className='grid grid-cols-2 lg:grid-cols-3 gap-3'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
           <ServiceCard
             icon={<TbSpeakerphone className={iconStyle} />}
             title='Web Development'
@@ -93,30 +102,20 @@ export default function Home() {
         <h1 className='text-2xl py-4 lg:text-4xl font-semibold text-center'>
           Testimonials <span className='text-[#A0E00D]'>About US</span>
         </h1>
-        <div className='grid grid-cols-2 gap-2 w-full'>
-          <div>
-            <TestimonialCard
-              image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzTWQoCUbRNdiyorem5Qp1zYYhpliR9q0Bw&s'
-              name='Emily Johnson'
-              job='Marketing Director, Sparkle Brands'
-              review='Saasta has transformed the way our marketing team operates. Its collaborative features and real-time updates have improved communication and coordination, leading to more successful campaigns and happier clients '
-            />
-          </div>
-          <div>
-            <TestimonialCard
-              image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyzTWQoCUbRNdiyorem5Qp1zYYhpliR9q0Bw&s'
-              name='Emily Johnson'
-              job='Marketing Director, Sparkle Brands'
-              review='Saasta has transformed the way our marketing team operates. Its collaborative features and real-time updates have improved communication and coordination, leading to more successful campaigns and happier clients '
-            />
-          </div>
+        <div className='lg:grid grid-cols-3 gap-5 w-full hidden'>
+          {reviews.map((review, index) => {
+            return <TestimonialCard key={index} {...review} />;
+          })}
+        </div>
+        <div>
+          <ReviewSwiper />
         </div>
       </section>
-      <section className='flex flex-col justify-center items-center gap-10 bg-[#121311] py-32'>
+      <section className='flex flex-col justify-center items-center gap-10 bg-[#121311] py-10 md:py-32'>
         <h1 className='text-center text-2xl xl:text-4xl font-semibold'>
           Ready to take your <br /> IT solutions to the next level?
         </h1>
-        <p className='text-center text-sm text-white/70 px-[20%]'>
+        <p className='text-center text-sm text-white/70 px-[10%]'>
           Ready to elevate your digital strategy? Book a free consultation with
           our IT experts today!
         </p>

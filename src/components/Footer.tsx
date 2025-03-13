@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='py-8 allPadding flex justify-between items-center'>
       <Image src='/logo.png' width={100} height={100} alt='FourBtech' />
-      <div >
+      <div className="hidden lg:block" >
         <ul className='flex justify-between items-center gap-2 text-sm text-white/70'>
           <li className='footerLinks'>Home</li>
           <li className='footerLinks'>Service</li>
