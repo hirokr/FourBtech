@@ -26,7 +26,7 @@ export default function Home() {
             accusamus ea?
           </p>
           <div
-            className='flex w-full xl:max-w-1/3
+            className='flex w-full sm:max-w-1/2 lg:max-w-1/3
           items-center space-x-2'
           >
             <Input
@@ -80,7 +80,7 @@ export default function Home() {
           Since 2020 we have been helping small to large businesses transform
           their businesses into digital products,
         </p>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3'>
           <ServiceCard
             icon={<TbSpeakerphone className={iconStyle} />}
             title='Web Development'
@@ -102,12 +102,12 @@ export default function Home() {
         <h1 className='text-2xl py-4 lg:text-4xl font-semibold text-center'>
           Testimonials <span className='text-[#A0E00D]'>About US</span>
         </h1>
-        <div className='lg:grid grid-cols-3 gap-5 w-full hidden'>
+        <div className='md:grid grid-cols-2 lg:grid-cols-3 gap-5 w-full hidden'>
           {reviews.map((review, index) => {
             return <TestimonialCard key={index} {...review} />;
           })}
         </div>
-        <div>
+        <div className="block sm:hidden">
           <ReviewSwiper />
         </div>
       </section>

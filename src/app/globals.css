@@ -129,16 +129,19 @@
     @apply flex justify-between items-center;
   }
   .colConatiner {
-    @apply  flex-col justify-center items-center 
+    @apply flex-col justify-center items-center;
   }
-  .headerButton{
-    @apply hover:text-[#A0E00D] transition-all 
+  .headerButton {
+    @apply hover:text-[#A0E00D] transition-all;
   }
-  .allPadding{
-    @apply px-10 lg:px-20 xl:px-34
+  .allPadding {
+    @apply px-10 lg:px-20 xl:px-34;
   }
-  .footerLinks{
-    @apply hover:text-white cursor-pointer
+  .footerLinks {
+    @apply hover:text-white cursor-pointer;
+  }
+  .mobileHeaderButton {
+    @apply hover:text-[#A0E00D] transition-all py-5 text-base ;
   }
 }
 

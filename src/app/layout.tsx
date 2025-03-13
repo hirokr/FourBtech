@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-// import Sidebar from "@/components/sidebarProvider";
 
 const poppins = localFont({
   src: [
@@ -77,7 +76,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <Footer/>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
