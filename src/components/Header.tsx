@@ -17,7 +17,7 @@ const Header = () => {
       <div className="flex gap-5">
         <Button className='hidden sm:block '>Get Started</Button>
         <MobileNavbar menu={menu} setMenu={setMenu}/>
-        <Button className='block sm:hidden' onClick={() => setMenu(!menu)}>
+        <Button className='block md:hidden' onClick={() => setMenu(!menu)}>
           <Menu />
         </Button>
       </div>
