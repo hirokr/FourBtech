@@ -7,6 +7,7 @@ import { TbSpeakerphone } from "react-icons/tb";
 import TestimonialCard from "@/components/TestimonialCard";
 import { ReviewData } from "@/lib/reviewData";
 import { ReviewSwiper } from "@/components/personCardSwiper";
+import { LogoSpin } from "@/components/LogoSpin";
 
 export default function Home() {
   const iconStyle = "text-[#A0E00D]  h-8 w-8";
@@ -47,7 +48,9 @@ export default function Home() {
             className='object-contain'
           />
         </AspectRatio>
-        <div className=''></div>
+        <div className=''>
+          <LogoSpin />
+        </div>
       </section>
       <section className='grid grid-cols-1 sm:grid-cols-2 py-10 gap-5 '>
         <div className='flex-col flex justify-center items-start gap-3 '>
@@ -107,7 +110,7 @@ export default function Home() {
             return <TestimonialCard key={index} {...review} />;
           })}
         </div>
-        <div className="block sm:hidden">
+        <div className='block sm:hidden'>
           <ReviewSwiper />
         </div>
       </section>

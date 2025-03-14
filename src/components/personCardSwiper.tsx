@@ -10,6 +10,7 @@ export const ReviewSwiper = () => {
   return (
     <Swiper
       modules={[Pagination, Autoplay]} 
+      loop = {true}
       spaceBetween={40}
       slidesPerView={1}
       className='mySwiper'
